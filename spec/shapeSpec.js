@@ -35,7 +35,7 @@ describe("Shape", function() {
   });
  	
  	describe("getRGB", function() {
-    it("should should be a string with 1 side, and the color red", function() {
+    it("should have an rgb value of (255, 0, 0)", function() {
       expect(shape.getRGB()).toEqual("rgb(255,0,0)");
     });
   });

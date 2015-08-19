@@ -2,14 +2,14 @@ var Square = require("../src/square");
 
 var square;
 
-xdescribe("Square", function() {
+describe("Square", function() {
   beforeEach(function() {
     square = new Square(2, "red");
   });
 
-  xdescribe("Area", function() {
+  describe("Area", function() {
     it("should be 4 for a square", function() {
-      expect(square.area()).toEqual(4);
+    expect(square.area()).toEqual(4);
     });
   });
 
@@ -19,5 +19,22 @@ xdescribe("Square", function() {
     });
   });
 
-  // Write more specs!!
+  xdescribe("Draw", function() {
+    it("should should be 4 for a square", function() {
+      expect(shape.draw()).toEqual("A shape with " + 4 + " sides");
+    });
+  });
+
+  xdescribe("toString", function() {
+    it("should should be a string with 4 sides, and the color red", function() {
+      expect(shape.toString()).toEqual("[Shape sides:" + 4 + ", color:" + 'red' +" ]");
+    });
+  });
+  
+  xdescribe("getRGB", function() {
+    it("should be the rgb for red", function() {
+      expect(shape.getRGB()).toEqual("rgb(255,0,0)");
+    });
+  });
+  
 });

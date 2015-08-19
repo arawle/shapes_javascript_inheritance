@@ -19,5 +19,22 @@ xdescribe("Rectangle", function() {
     });
   });
 
-  // Write more specs!!
+  xdescribe("Draw", function() {
+    it("should should be 4 for a rectangle", function() {
+      expect(shape.draw()).toEqual("A shape with " + 4 + " sides");
+    });
+  });
+
+  describe("toString", function() {
+    it("should should be a string with 4 sides, and the color blue", function() {
+      expect(shape.toString()).toEqual("[Shape sides:" + 4 + ", color:" + 'blue' +" ]");
+    });
+  });
+  
+  describe("getRGB", function() {
+    it("should be the rgb for blue", function() {
+      expect(shape.getRGB()).toEqual("rgb(0, 0, 255)");
+    });
+  });
+
 });
