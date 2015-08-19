@@ -29,7 +29,7 @@ Shape.prototype.getRGB = function() {
 	  if(this.colors.indexOf([this.color])) {
 		return (this.rgbColors[i]);
 	  } else {
-	  	return ('cheese')
+	  	return ('that color is not supported')
 	  }
 	}
 }
