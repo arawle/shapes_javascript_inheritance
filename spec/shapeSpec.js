@@ -16,5 +16,29 @@ describe("Shape", function() {
     });
   });
 
-  // Write more specs!!
+  describe("Perimeter", function() {
+    it("should should be 0 for this abstract shape", function() {
+      expect(shape.perimeter()).toEqual(0);
+    });
+  });
+
+  describe("Draw", function() {
+    it("should should be 1 for this abstract shape", function() {
+      expect(shape.draw()).toEqual("A shape with " + 1 + " sides");
+    });
+  });
+
+  describe("toString", function() {
+    it("should should be a string with 1 side, and the color red", function() {
+      expect(shape.toString()).toEqual("[Shape sides:" + 1 + ", color:" + 'red' +" ]");
+    });
+  });
+ 	
+ 	describe("getRGB", function() {
+    it("should should be a string with 1 side, and the color red", function() {
+      expect(shape.getRGB()).toEqual("rgb(255,0,0)");
+    });
+  });
+
+
 });
