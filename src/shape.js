@@ -2,9 +2,14 @@
 function Shape(sides, color) {
   this.sides = sides;
   this.color = color;
-  this.colors = ['red', 'blue', 'green', 'yellow', 'black'];
-  this.rgbColors = ['rgb(255,0,0)', 'rgb(0,0,255)', 'rgb(0,255,0)', 'rgb(255, 255, 0)', 'rgb(0,0,0)']
-}
+  }
+
+var colors = {red:'rgb(255,0,0)',
+              blue: 'rgb(0,0,255)', 
+              green: 'rgb(0,255,0)', 
+              yellow: 'rgb(255, 255, 0)', 
+              black: 'rgb(0,0,0)'}
+
 Shape.prototype.area = function(length, width) {
   return 0;
 };
@@ -24,14 +29,11 @@ Shape.prototype.toString = function(sides, color) {
 };
 
 Shape.prototype.getRGB = function() {
-  // console.log('======' + this.colors.indexOf([this.color]));
-  for(var i = 0; i < this.colors.length; i++) {
-	  if(this.colors.indexOf([this.color])) {
-		return (this.rgbColors[i]);
-	  } else {
-	  	return ('that color is not supported')
-	  }
-	}
+   for (var key in colors){
+    if(key === this.color){
+      return colors[key];
+    }
+   }
 }
 
 module.exports = Shape;

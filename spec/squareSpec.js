@@ -13,27 +13,27 @@ describe("Square", function() {
     });
   });
 
-  xdescribe("Perimeter", function() {
+  describe("Perimeter", function() {
     it("should be 8 for a square with side length 2", function() {
-      expect(square.area()).toEqual(8);
+      expect(square.perimeter()).toEqual(8);
     });
   });
 
-  xdescribe("Draw", function() {
+  describe("Draw", function() {
     it("should should be 4 for a square", function() {
-      expect(shape.draw()).toEqual("A shape with " + 4 + " sides");
+      expect(square.draw()).toEqual("A shape with " + 4 + " sides");
     });
   });
 
-  xdescribe("toString", function() {
+  describe("toString", function() {
     it("should should be a string with 4 sides, and the color red", function() {
-      expect(shape.toString()).toEqual("[Shape sides:" + 4 + ", color:" + 'red' +" ]");
+      expect(square.toString()).toEqual("[Square sideLength: " + 2 + ", color:" + 'red' +" ]");
     });
   });
   
-  xdescribe("getRGB", function() {
+  describe("getRGB", function() {
     it("should be the rgb for red", function() {
-      expect(shape.getRGB()).toEqual("rgb(255,0,0)");
+      expect(square.getRGB()).toEqual("rgb(255,0,0)");
     });
   });
   

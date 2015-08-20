@@ -2,38 +2,38 @@ var Rectangle = require("../src/rectangle");
 
 var rectangle;
 
-xdescribe("Rectangle", function() {
+describe("Rectangle", function() {
   beforeEach(function() {
-    rectangle = new Rectangle(4,6, "blue");
+    rectangle = new Rectangle(4, 6, "blue");
   });
 
-  xdescribe("Area", function() {
+  describe("Area", function() {
     it("should be 24 for a rectangle with sides of 4 and 6", function() {
       expect(rectangle.area()).toEqual(24);
     });
   });
 
-  xdescribe("Perimeter", function() {
-    it("should be 20 for a square with side lengths 4,6", function() {
-      expect(rectangle.area()).toEqual(20);
+  describe("Perimeter", function() {
+    it("should be 20 for a rectangle with side lengths 4,6", function() {
+      expect(rectangle.perimeter()).toEqual(20);
     });
   });
 
-  xdescribe("Draw", function() {
+  describe("Draw", function() {
     it("should should be 4 for a rectangle", function() {
-      expect(shape.draw()).toEqual("A shape with " + 4 + " sides");
+      expect(rectangle.draw()).toEqual("A shape with " + 4 + " sides");
     });
   });
 
-  xdescribe("toString", function() {
+  describe("toString", function() {
     it("should should be a string with 4 sides, and the color blue", function() {
-      expect(shape.toString()).toEqual("[Shape sides:" + 4 + ", color:" + 'blue' +" ]");
+      expect(rectangle.toString()).toEqual('[Rectangle sideLengths: 4 and 6, color: blue]');
     });
   });
   
-  xdescribe("getRGB", function() {
+  describe("getRGB", function() {
     it("should be the rgb for blue", function() {
-      expect(shape.getRGB()).toEqual("rgb(0, 0, 255)");
+      expect(rectangle.getRGB()).toEqual("rgb(0,0,255)");
     });
   });
 
