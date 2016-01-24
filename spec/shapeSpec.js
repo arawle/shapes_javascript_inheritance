@@ -3,7 +3,7 @@ var Shape = require("../src/shape");
 var shape;
 shape = new Shape(1,"red");
 
-xdescribe("Shape", function() {
+describe("Shape", function() {
   beforeEach(function() {
     shape = new Shape(1, "red");
   });
@@ -31,11 +31,10 @@ xdescribe("Shape", function() {
       expect(shape.toString()).toEqual("[Shape sides:" + 1 + ", color:" + 'red' +" ]");
     });
   });
- 	
+
  	describe("getRGB", function() {
     it("should have an rgb value of (255, 0, 0)", function() {
       expect(shape.getRGB()).toEqual("rgb(255,0,0)");
     });
   });
-
 });

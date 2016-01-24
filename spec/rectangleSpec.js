@@ -30,11 +30,10 @@ describe("Rectangle", function() {
       expect(rectangle.toString()).toEqual('[Rectangle sideLengths: 4 and 6, color: blue]');
     });
   });
-  
+
   describe("getRGB", function() {
     it("should be the rgb for blue", function() {
       expect(rectangle.getRGB()).toEqual("rgb(0,0,255)");
     });
   });
-
 });

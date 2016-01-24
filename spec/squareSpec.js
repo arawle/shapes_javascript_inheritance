@@ -30,11 +30,10 @@ describe("Square", function() {
       expect(square.toString()).toEqual("[Square sideLength: " + 2 + ", color:" + 'red' +" ]");
     });
   });
-  
+
   describe("getRGB", function() {
     it("should be the rgb for red", function() {
       expect(square.getRGB()).toEqual("rgb(255,0,0)");
     });
   });
-  
 });
